@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ARRAYS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        let legend = ['reyco', 'eyco', 'xreyc'];
+        console.log(legend); // Array(3) [ "reyco", "eyco", "xreyc" ]
+        console.log(legend[2]); // xreyc (getting one elements in the array)
+
+        legend[2] = 'reyc';
+        console.log(legend[2]); // reyc (overriding the value in an array)
+
+        let random = ['reyco', 24, 1996];
+        console.log(random); // Array(3) [ "reyco", 24, 1996 ] (it is an array with a mix data type)
+
+        console.log(legend.length); // 3 (it is for getting the length of an array)
+
+        // array methods
+          let a = legend.join(',');
+          console.log(a); // reyco,eyco,reyc (it is joining the elements in an array with a coma)
+          let b = legend.indexOf('eyco');
+          console.log(b); // 1 (getting the position of an array)
+          let c = legend.concat(['kz', 'kezeah'])
+          console.log(c); // Array(5) [ "reyco", "eyco", "reyc", "kz", "kezeah" ] (adding elements to the array)
+          let d = legend.push('kz');
+          console.log(d); // 4
+          let e = legend.pop();
+          console.log(e); // kz (it pop up the last element of the array)
+    </script>
+  </body>
+</html>

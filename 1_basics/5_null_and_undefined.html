@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NULL AND UNDEFINED</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let age;
+      console.log(age, age + 3, `the age is ${age}`); // undefined NaN the age is undefined (it return undefined because the value has not been defined yet)
+
+      age = null;
+      console.log(age, age + 3, `the age is ${age}`); // null 3 the age is null (the age has given a value of null)
+    </script>
+  </body>
+</html>

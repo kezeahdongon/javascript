@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BOOLEANS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // booleans and comparisons
+      console.log(true, false); // true false (these are reserve terms)
+
+      // methods can return booleans
+      let email = 'kezeahdongon@gmail.com';
+      let a = email.includes('@');
+      console.log(a); // true (because it does have '@' in the string)
+
+      let names = ['rey', 'reyco', 'eyco'];
+      let b = names.includes('reyco');
+      console.log(b); // true (because the array has a string 'reyco')
+      let c = names.includes('kz');
+      console.log(c); // false ('kz' is not in the array)
+
+      // comparison operators
+      let age = 25;
+      console.log(age == 25); // true (== is equal)
+      console.log(age == 30); // false (the age is not equal to 30)
+      console.log(age >= 23); // true (>= is greater than or equal to)
+      console.log(age <= 23); // false (<= is less than or equal to)
+      console.log(age != 26); // true (!= is not equal to)
+      console.log(age > 23); // true (is greater than)
+      console.log(age < 26); // true (is less than)
+
+      let name = 'reyco';
+      console.log(name == 'reyco'); // true
+      console.log(name == 'Reyco'); // false (javascript is a case sensitive)
+      console.log(name > 'kezeah'); // true (later letter in the alphabet are greater than the early letter in the alphabet)
+      console.log(name > 'Reyco'); // true (lower case letter are greater than upper case letters in javascript)
+
+      // loose comparison (different type can still be equal)
+      let d = 5;
+      console.log(d == 5); // true
+      console.log(d == '5'); // true (it converts the string '5' into a number before it evaluates)
+      console.log(d != 5); // false (d is equal to 5)
+      console.log(d != '5'); // false
+
+      //  strict comparison (different types cannot be equal)
+      console.log(d === 5); // true
+      console.log(d === '5'); // false (string is not equal to number)
+      console.log(d !== 5); // false (d is equal to number 5)
+      console.log(d !== '5'); // true (d is not equal to the string '5')
+    </script>
+  </body>
+</html>

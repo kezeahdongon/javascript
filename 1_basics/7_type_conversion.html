@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TYPE CONVERSION</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    let score = '100';
+    console.log(score + 1); // 1001 (the number typr 1 will be added to the string '100')
+    score = Number(score); // changing the string to a number type
+    console.log(score + 1); // 101 (because the string '100' is now read as a number)
+
+    console.log(typeof score); // number (it is to determine what type of data is the variable)
+
+    let a = Number('hello');
+    console.log(a); // NaN
+    let b = String(50);
+    console.log(b); // 50 (number 50 can be converted as string '50')
+    console.log(typeof b); // String
+
+    let c = Boolean(100);
+    console.log(c, typeof c); // true boolean (true because it has a value)
+
+    let d = Boolean(0);
+    console.log(d, typeof d); // false boolean (zero has no value)
+
+    let e = Boolean('');
+    console.log(e, typeof e); // false boolean (because empty string has no value)
+    </script>
+  </body>
+</html>

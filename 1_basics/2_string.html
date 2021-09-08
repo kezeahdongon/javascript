@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>STRING</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Data Types (number, string, boolean, null, undefined, object, and symbol)
+        // STRING
+          console.log('Hi, Mahal ko!'); // Hi, Mahal ko!
+          let email = 'kezeahdongon@gmail.com';
+          console.log(email); // kezeahdongon@gmail.com
+
+          // string concatenation
+          let Fname = 'Kezeah';
+          let Lname = 'Dongon';
+          let FullName = Fname + ' ' + Lname;
+          console.log(Fname+' '+Lname); // Kezeah Dongon
+
+          // gettig character
+          console.log(Fname[2]); // z (getting a character by specific index)
+
+          // string length
+          console.log(FullName.length); // 13 (getting the length of the string)
+
+          // string method
+          console.log(FullName.toUpperCase()); // KEZEAH DONGON
+          console.log(FullName.toLowerCase()); // kezeah dongon
+
+          // common string methods
+          let result1 = email.lastIndexOf('n');
+          console.log(result1); // 11 (getting the last position of a character in a string)
+          let result2 = email.slice(0, 12);
+          console.log(result2); // slice(start, end) - kezeahdongon (slicing a piece of string from a string)
+          let result3 = email.substr(6, 6);
+          console.log(result3); // substr(start, length) - dongon (slicing a piece of string with a specific starting position and with a specific length)
+          let result4 = email.replace('n', 'm');
+          console.log(result4); // replace(value to replace, value) - kezeahdomgon@gmail.com (only the first value if multiple willbe replaced)
+
+        // template string
+          const title = 'The Legendary Monkey Named Reyco';
+          const author = 'Kezeah Dongon';
+          const readers = 1000000000;
+
+          // concatenation way
+          let result5 = 'The book ' + title + ' by ' + author + ' has ' + readers + ' readers.';
+          console.log(result5); // The book The Legendary Monkey Named Reyco by Kezeah Dongon has 1000000000 readers.
+
+          // template string way
+          let book = `The book ${title} by ${author} has ${readers} readers.`;
+          console.log(book); // The book The Legendary Monkey Named Reyco by Kezeah Dongon has 1000000000 readers.
+
+          // creating html template
+          let html = `
+          <h2>${title}</h2>
+          <p>by ${author}</p>
+          <span>has ${readers} readers.</span>
+          `;
+          console.log(html);  // <h2>The Legendary Monkey Named Reyco</h2>
+                              // <p>by Kezeah Dongon</p>
+                              // <span>has 1000000000 readers.</span>
+    </script>
+  </body>
+</html>
