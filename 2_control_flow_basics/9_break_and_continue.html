@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BREAK AND CONTINUE</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    const score = [50, 22, 34, 23, 100];
+
+    for(let i = 0; i < score.length; i++){
+      if(score[i] === 0){
+        continue; // when the score is zero it will not show the score but it will continue to the next
+      }
+      console.log('your score is: ', i);  // your score is:  0
+                                          // your score is:  1
+                                          // your score is:  2
+                                          // your score is:  3
+                                          // your score is:  4
+      if(score[1] === 100){
+        console.log('you got a perfect score!');
+        break;
+      }
+    }
+    </script>
+  </body>
+</html>

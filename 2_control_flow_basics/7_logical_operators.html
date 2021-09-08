@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGICAL OPERATORS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // logical operator (|| or) and (&& and)
+    const password = 'p@$$w0rd';
+
+    if(password.length >= 8 && password.includes('@')){
+      console.log('the password is strong');  // the password is strong
+    }
+    else if(password.length > 10 || password.includes('$')){
+      console.log('the password is very strong');
+    }
+    else{
+      console.log('the password is weak');
+    }
+    </script>
+  </body>
+</html>
