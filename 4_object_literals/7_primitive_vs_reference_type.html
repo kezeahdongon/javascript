@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>PRIMITIVE VS REFERENCE TYPE</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*
+     primitive type                         reference type
+        -numbers                                - all types of objects
+        -strings                                - objects literals
+        -booleans                               - arrays
+        -null                                   - functions
+        -undefined                              - dates
+        -symbols                                - all other objects
+    */
+
+    // primitive values
+    let scoreOne = 50;
+    let scoreTwo = scoreOne;
+
+    console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);  //  scoreOne: 50 scoreTwo: 50
+
+    scoreOne = 34;
+    console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);  //  scoreOne: 34 scoreTwo: 50
+    </script>
+  </body>
+</html>

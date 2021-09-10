@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>"THIS" KEYWORD</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // 'this' keyword is a context object
+    let user = {
+      name: 'kezeah',
+      age: 23,
+      location: 'philippines',
+      email: 'kezeahdongon54@gmail.com',
+      blogs: ['the monkey monster', 'the legend of the monkey', 'reyco is the monkey'],
+      login: function(){
+        console.log('the user logged in...');
+      },
+      logout: function(){
+        console.log('the user has logged out...');
+      },
+      logBlogs: function(){
+        // console.log(this.blogs);    // Array(3) [ "the monkey monster", "the legend of the monkey", "reyco is the monkey" ]
+        console.log('this user has written: ');
+        this.blogs.forEach(blogs => {
+          console.log(blogs);   //  this user has written:
+                                //  the monkey monster
+                                //  the legend of the monkey
+                                //  reyco is the monkey
+        })
+      }
+    };
+    user.logBlogs();  //  Object { name: "kezeah", age: 23, location: "philippines", email: "kezeahdongon54@gmail.com", blogs: (3) […], login: login(), logout: logout(), logBlogs: logBlogs() }
+    console.log(this);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>OBJECTS IN ARRAY</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    // const blog = [
+    //   {title: 'the monkey king', year: 1998},
+    //   {title: 'reyco the legend', year: 1996}
+    // ]
+    // console.log(blog);    // Array [ {…}, {…} ]
+                          // 0: Object { title: "the monkey king", year: 1998 }
+                          // 1: Object { title: "reyco the legend", year: 1996 }
+
+    let user = {
+      name: 'kezeah',
+      age: 23,
+      location: 'philippines',
+      email: 'kezeahdongon54@gmail.com',
+      blogs: [
+        {title: 'the monkey king', year: 1998},
+        {title: 'reyco the legend', year: 1996}
+      ],
+      login: function(){
+        console.log('the user logged in...');
+      },
+      logout: function(){
+        console.log('the user has logged out...');
+      },
+      logBlogs: function(){
+        console.log('this user has written: ');
+        this.blogs.forEach(blogs => {
+          console.log(blogs.title, blogs.year);   // this user has written:
+                                                  // the monkey king 1998
+                                                  // reyco the legend 1996
+        })
+      }
+    };
+    user.logBlogs();
+    </script>
+  </body>
+</html>

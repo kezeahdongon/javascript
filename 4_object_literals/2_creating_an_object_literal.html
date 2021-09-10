@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CREATING AN OBJECT LITERAL</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    // object literals
+    let user = {
+      name: 'kezeah',
+      age: 23,
+      location: 'philippines',
+      email: 'kezeahdongon54@gmail.com'
+    };
+    console.log(user);          //  Object { name: "kezeah", age: 23, location: "philippines", email: "kezeahdongon54@gmail.com" }
+    console.log(user.name);     // kezeah (to obtain or access property)
+    console.log(user['name']);  // kezeah (other way of obtaining or accessing the property by using the square bracket)
+
+    user.name = 'reyco';
+    console.log(user.name);     //  reyco (overriding the value in name)
+    user['name'] = 'reyke';
+    console.log(user.name);     //  reyke (other way to override a property)
+    </script>
+  </body>
+</html>

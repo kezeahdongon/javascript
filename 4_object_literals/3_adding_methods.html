@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADDING METHODS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    let user = {
+      name: 'kezeah',
+      age: 23,
+      location: 'philippines',
+      email: 'kezeahdongon54@gmail.com',
+      login: function(){
+        console.log('the user logged in...');
+      },
+      logout: function(){
+        console.log('the user has logged out...');
+      }
+    };
+
+    user.login();     //  the user logged in...
+    user.logout();    //  the user has logged out...
+
+    /*
+    PROTOTYPE
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.course = "ECE";
+    }
+
+    const person1 = new Person("Reyco",24);
+    const person2 = new Person("Kezeah", 23);
+    console.log(person1);
+    console.log(person2);
+    */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MATH OBJECTS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // math objects
+    console.log(Math);                      //  Math { … }
+    console.log(Math.PI);                   //  3.141592653589793
+    console.log(Math.E);                    //  2.718281828459045
+
+    const area = 7.7;
+    console.log(Math.round(area));          //  8 (ROUND -rounding the number to the nearest integer)
+    console.log(Math.floor(area));          //  7 (FLOOR -it will floor to the while number taking away the decimal)
+    console.log(Math.ceil(area));           //  8 (CEIL -it rounded up the number)
+    console.log(Math.trunc(area));          //  7 (TRUNC -it takes away the decimal and leave the integer)
+
+    // random numbers
+    const random = Math.random();
+    console.log(random);                    // will give random value between 0-1
+    console.log(Math.round(random));        // will give random number either 1 or 0
+    console.log(Math.round(random * 100));  // will give a bumber between 1-100
+    </script>
+  </body>
+</html>
