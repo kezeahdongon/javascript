@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CALLBACK FUNCTIONS IN ACTION</title>
+  </head>
+  <body>
+
+    <ul class="people"></ul>
+
+    <script type="text/javascript">
+    // get reference to the 'ul'
+    const ul = document.querySelector('.people');
+    console.log(ul);
+    const people = ['reyco','rey','xreyc','cocoy','eyco'];
+    let html = ``;
+
+    people.forEach(person => {
+      // create html template
+      html += `<li style="color:purple">${person}</li>`;
+    });
+
+    console.log(html);
+    ul.innerHTML = html;  //  * reyco
+                          //  * rey
+                          //  * xreyc
+                          //  * cocoy
+                          //  * eyco
+    </script>
+  </body>
+</html>
