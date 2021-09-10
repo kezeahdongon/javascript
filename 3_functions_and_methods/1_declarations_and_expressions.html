@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FUNCTION DECLARATION AND EXPRESSIONS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // function declaration
+    function greet(){
+      console.log('hello there');
+    }
+    greet();  // hello there (you are calling the function)
+
+    // function expression
+    const speak = function(){
+      console.log('good day!');
+    };
+    speak(); // good day!
+
+    // ## HOISTING
+    // Function hoisting - calling a function before its declaration
+    greeting(); //  good day everyone!
+    function greeting(){
+      console.log('good day everyone!');
+    }
+
+    // Variable hoisting - calling a variable before its declarion/assignment
+    console.log(hosting); //  undefined
+    var hosting = 5;
+
+    </script>
+  </body>
+</html>
