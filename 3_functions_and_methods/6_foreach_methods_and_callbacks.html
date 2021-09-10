@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FOREACH METHODS AND CALLBACKS</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // callbacks and foreach
+    const myFunc = (callbackFunc) => {
+      // do something
+      let value = 50;
+      callbackFunc(value);
+    };
+    myFunc(function(value){
+      // do something
+      console.log(value);
+    }); // 50 (passing a function into something as an argument)
+
+    // it can be written as this
+    /*
+      myFunc(value => {
+        console.log(value);
+      });
+    */
+
+    // foreach - it iterates over an array
+    let people = ['reyco','kezeah','cocoy','kz'];
+    people.forEach(function(person){
+      console.log(person);  //  reyco
+                            //  kezeah
+                            //  cocoy
+                            //  kz
+
+      // console.log('something');
+    }); // 4 something
+
+    let legend = ['reyco','reyc','rey'];
+    legend.forEach((man, index) => {
+      console.log(index, man);
+    }); //  0 reyco
+        //  1 reyc
+        //  2 rey
+
+    const logLegend = (man, index) => {
+      console.log(`${index} hello ${man}`);
+    }
+    legend.forEach(logLegend);  //  0 hello reyco
+                                //  1 hello reyc
+                                //  2 hello rey
+    </script>
+  </body>
+</html>

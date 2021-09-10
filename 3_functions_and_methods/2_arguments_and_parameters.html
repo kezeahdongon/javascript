@@ -6,7 +6,26 @@
   </head>
   <body>
     <script type="text/javascript">
+    // arguments and parameters
+    const speak = function(){
+      console.log('good day!');
+    };
+    speak(); // good day!
+
+    const greet = function(name){
+      console.log(`good day ${name}`);
+    };
+    greet(); // good day undefined
+    greet('reyco'); //  good day reyco (it passes the value to the function(name) w/c is a local variable)
+
+    /* const greet = function(parameter){
+      console.log(`good day ${parameter}`);
+    };
+    greet('argument');
+    */
+
     
+
     </script>
   </body>
 </html>
