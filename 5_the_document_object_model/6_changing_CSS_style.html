@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>CHANGING CSS STYLE</title>
+  </head>
+  <body>
+    <h1 id="page-title" style="color: orange;">The DOM</h1>
+
+    <a href="https://www.google.com">link to something cool...</a>
+
+    <p class="error">this is an error message</p>
+
+    <script type="text/javascript">
+    const title = document.querySelector('h1');
+    console.log(title.style.color);
+    title.style.margin = '50px';
+    title.style.color = 'crimson';
+    title.style.fontSize = '60px';
+    title.style.margin = '';  //  for removing margin
+    </script>
+  </body>
+</html>

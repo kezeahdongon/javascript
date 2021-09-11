@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>OTHER WAYS TO QUERY THE DOCUMENT</title>
+  </head>
+  <body>
+    <h1 id="page-title">The DOM</h1>
+
+    <div>
+      <p>hello, world!</p>
+      <p>lorem ipsum</p>
+      <p class="error">this is an error message</p>
+    </div>
+
+    <div class="error">
+      this is another error
+    </div>
+    <script type="text/javascript">
+    // get an element by ID
+    const title = document.getElementById('page-title');
+    console.log(title); // <h1 id="page-title">
+
+    // get elements by their class name
+    const errors = document.getElementsByClassName('error');
+    console.log(errors);  // HTMLCollection { 0: p.error, 1: div.error, length: 2 }
+
+    // get elements by their tag names
+    const para = document.getElementsByTagName('p');
+    console.log(para);  // HTMLCollection { 0: p, 1: p, 2: p.error, length: 3 }
+    </script>
+  </body>
+</html>

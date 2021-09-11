@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>GETTING AND SETTING ATTRIBUTES</title>
+  </head>
+  <body>
+    <h1 id="page-title">The DOM</h1>
+
+    <a href="https://www.google.com">link to something cool...</a>
+
+    <p class="error">this is an error message</p>
+
+    <script type="text/javascript">
+    const link = document.querySelector('a');
+    console.log(link.getAttribute('href')); //getting the attribute from the html
+    link.setAttribute('href', 'https://wwww.youtube.com');
+    link.innerText = 'https://www.youtube.com';
+
+    const sms = document.querySelector('p');
+    console.log(sms.getAttribute('class')); // it gets the class of the attribute
+    sms.setAttribute('class', 'success'); //  setAttribute('attribute', 'new attribute')
+
+    </script>
+  </body>
+</html>
