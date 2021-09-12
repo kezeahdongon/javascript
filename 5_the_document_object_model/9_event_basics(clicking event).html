@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      li{
+        list-style-type: none;
+        max-width: 200px;
+        padding: 8px;
+        margin: 8px auto;
+        background: #eee;
+        border: 1px dotted #ddd;
+      }
+    </style>
+      <title>EVENT BASICS (CLICKING EVENT)</title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+
+    <ul>
+      <li>buy milk</li>
+      <li>read a book</li>
+      <li>play the guitar</li>
+      <li>pay the bills :(</li>
+    </ul>
+
+    <button>click me!</button>
+    </article>
+
+    <script type="text/javascript">
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      console.log('you clicked me');
+    });
+
+    const items = document.querySelectorAll('li');
+    items.forEach(item => {
+      item.addEventListener('click', e => {
+        // console.log('item clicked');
+        console.log(e.target);
+        e.target.style.textDecoration = 'line-through';   // deleting element or crashing out elements
+      })
+    })
+    </script>
+  </body>
+</html>

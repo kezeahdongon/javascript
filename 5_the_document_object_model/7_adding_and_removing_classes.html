@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles.css">
+      <title>ADDING AND REMOVING CLASSES</title>
+  </head>
+  <body>
+    <h1 class="title">The DOM</h1>
+
+    <input type="button" onclick="toggleBgColor()" value="Toggle">
+
+    <p>this is an default message </p>
+    <p>this is an error </p>
+    <p>this is an default message </p>
+    <p>this is an success </p>
+    <p>this is an error </p>
+    <p>this is an default message </p>
+    <p>this is an success </p>
+    <p>this is an error </p>
+    <p>this is an success </p>
+    <p>this is an default message </p>
+    <p>this is an error </p>
+
+    <script type="text/javascript">
+    // const content = document.querySelector('p');
+    // console.log(content.classList); // DOMTokenList [ "error" ]
+    // content.classList.add('error'); // adding class to html tags
+    // content.classList.remove('error');  // removing class to html tags
+    // content.classList.add('success');
+
+    const txt = document.querySelectorAll('p');
+    txt.forEach(p => {
+      // console.log(p.innerText); // will get only the visible texts.
+      // console.log(p.textContent); // will get all texts regardless whether it is visible or hidden
+
+      if(p.textContent.includes('error')){
+        p.classList.add('error');
+      }
+      else if(p.textContent.includes('success')){
+        p.classList.add('success');
+      }
+      else{
+        p.classList.add('others');
+      }
+    })
+
+
+    const title = document.querySelector('.title');
+    function toggleBgColor() {
+      title.classList.toggle('test');
+    }
+
+    </script>
+  </body>
+</html>

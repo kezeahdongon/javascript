@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>PARENTS, CHILDREN, AND SIBLINGS</title>
+  </head>
+  <body>
+    <h1 class="title">The DOM</h1>
+
+    <article>
+      <h2>article title</h2>
+      <p>lorem ipsum</p>
+      <p>lorem ipsum</p>
+      <p>lorem ipsum</p>
+      <p>lorem ipsum</p>
+      <p>lorem ipsum</p>
+      <div>
+        written by kezeah.
+      </div>
+    </article>
+
+    <script type="text/javascript">
+    const article = document.querySelector('article');
+    // console.log(article.children);  // HTMLCollection { 0: h2, 1: p, 2: p, 3: p, 4: p, 5: p, 6: div, length: 7 } (will call all the children of the tag.)
+    // console.log(Array.from(article.children));  // Array(7) [ h2, p, p, p, p, p, div ] (it returns a new value w/c is an array from the HTMLCollection)
+
+    Array.from(article.children).forEach(child => {
+      child.classList.add('article-element');
+    });
+
+    const title = document.querySelector('h2');
+    console.log(title.parentElement.parentElement); //  <body>  (it will get the parent of the texts)
+    console.log(title.nextElementSibling);  //  <p class="article-element"> (it gets the next sibling)
+    console.log(title.previousElementSibling);  //  null (it return null because there is no sibling before the element)
+
+    // chaining
+    console.log(title.nextElementSibling.parentElement.children); //  HTMLCollection { 0: h2.article-element, 1: p.article-element, 2: p.article-element, 3: p.article-element, 4: p.article-element, 5: p.article-element, 6: div.article-element, length: 7 }
+    </script>
+  </body>
+</html>
