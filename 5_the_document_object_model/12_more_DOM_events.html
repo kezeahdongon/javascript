@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 10px 0;
+        background: #eee;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+      <title>MORE DOM EVENTS</title>
+  </head>
+  <body>
+    <p class="copy-me">lorem ipsum dolor sit, amet consectetur</p>
+    <div class="box">
+      move the mouse around this box.
+    </div>
+
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
+
+    <script type="text/javascript">
+    const copy = document.querySelector('.copy-me');
+    copy.addEventListener('copy', () => {
+      console.log('this content has copyright');  // if tried to copy the console will return the string 'this content has copyright'
+    });
+
+    const box = document.querySelector('.box');
+    box.addEventListener('mousemove', e => {
+      // console.log(e);
+      // console.log(e.offsetX, e.offsetY);
+      box.textContent = `x pos - ${e.offsetX} y pos - ${e.offsetY}`;
+    });
+
+    document.addEventListener('wheel', e => {
+      console.log(e.pageX, e.pageY);
+    })
+    </script>
+  </body>
+</html>

@@ -12,7 +12,7 @@
         border: 1px dotted #ddd;
       }
     </style>
-      <title>CREATING AND REMOVING ELEMENTS</title>
+      <title>EVENT BUBBLING (AND DELEGATION)</title>
   </head>
   <body>
     <h1>Todos</h1>
@@ -29,26 +29,28 @@
 
     <script type="text/javascript">
     const ul = document.querySelector('ul');
-    // ul.remove();
-
     const button = document.querySelector('button');
+
     button.addEventListener('click', () => {
-      // APPEND ELEMENT
-      ul.innerHTML += '<li>new todo</li>';
-      // UPDATE EVENTS
-      let items = ul.children;
-      for (var i = 0; i < items.length; i++) {
-        items[i].addEventListener('click', e => { e.target.remove(); });
-      }
+      const li = document.createElement('li');
+      li.textContent = 'something new todo';
+      ul.prepend(li);
     });
 
-    let items = document.querySelectorAll('li');
-    items.forEach(item => {
-      item.addEventListener('click', e => {
-        // console.log('item clicked');
-        // e.target.style.textDecoration = 'line-through';   // deleting element or crashing out elements
-        e.target.remove(); // item.remove()
-      });
+    const items = document.querySelectorAll('li');
+
+    // items.forEach(item => {
+    //   item.addEventListener('click', e => {
+    //     console.log('event in LI');
+    //     e.target.remove();
+    //   });
+    // });
+
+    ul.addEventListener('click', e => {
+      // console.log('event in UL');
+      if(e.target.tagName === 'LI'){
+        e.target.remove();
+      }
     });
     </script>
   </body>
