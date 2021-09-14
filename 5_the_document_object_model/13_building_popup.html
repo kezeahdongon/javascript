@@ -3,54 +3,86 @@
   <head>
     <meta charset="utf-8">
     <style>
-      .box {
-        width: 200px;
-        height: 200px;
-        margin: 10px 0;
-        background: #eee;
+      body{
+        background: gray;
+      }
+      button{
+        display: block;
+        margin: 20px auto;
+        background: crimson;
+        color: white;
+        border: 0;
+        padding: 6px 10px;
+      }
+
+      .popup-wrapper{
+        background: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+
+      .popup{
+        font-family: arial;
         text-align: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 10% auto;
         padding: 20px;
+        background: white;
+        position: relative;
+      }
+
+      .popup a{
+        background: crimson;
+        color: white;
+        text-decoration: none;
+        padding: 6px 10px;
+      }
+
+      .popup-close{
+        position: absolute;
+        top: 5px;
+        right: 8px;
+        cursor: pointer;
       }
     </style>
-      <title>MORE DOM EVENTS</title>
+      <title>BUILDING POPUPS</title>
   </head>
   <body>
-    <p class="copy-me">lorem ipsum dolor sit, amet consectetur</p>
-    <div class="box">
-      move the mouse around this box.
+    <button>click me!</button>
+
+    <div class="popup-wrapper">
+      <div class="popup">
+        <div class="popup-close">
+          x
+        </div>
+        <div class="popup-content">
+          <h2>legends</h2>
+          <p>the legends... 100% true!</p>
+          <a href="#">know the legend</a>
+        </div>
+      </div>
     </div>
-
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-    <p>eshdjthfjy ksjf sdf askfhwe skfdwe askdjfw</p>
-
     <script type="text/javascript">
-    const copy = document.querySelector('.copy-me');
-    copy.addEventListener('copy', () => {
-      console.log('this content has copyright');  // if tried to copy the console will return the string 'this content has copyright'
-    });
+    const button = document.querySelector('button');
+    const popup = document.querySelector('.popup-wrapper');
+    const close = document.querySelector('.popup-close');
 
-    const box = document.querySelector('.box');
-    box.addEventListener('mousemove', e => {
-      // console.log(e);
-      // console.log(e.offsetX, e.offsetY);
-      box.textContent = `x pos - ${e.offsetX} y pos - ${e.offsetY}`;
-    });
+    button.addEventListener('click', () => {
+      popup.style.display = 'block';
+    }); //  if clicked, the popup will show up
 
-    document.addEventListener('wheel', e => {
-      console.log(e.pageX, e.pageY);
-    })
+    close.addEventListener('click', () => {
+      popup.style.display = 'none';
+    }); // click on the 'x' mark to close the popup
+
+    popup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    }); // click anywhere to close the popup
     </script>
   </body>
 </html>

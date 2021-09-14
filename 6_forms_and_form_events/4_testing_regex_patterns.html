@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      body{
+        background: #eee;
+      }
+
+      form{
+        max-width: 200px;
+        margin: 40px auto;
+        background: white;
+        padding: 10px;
+      }
+
+      input{
+        display: block;
+        margin: 10px auto;
+        padding: 4px;
+      }
+    </style>
+      <title>TESTING REGEX PATTERNS</title>
+  </head>
+  <body>
+    <form class="signup-form">
+      <input type="text" name="username" placeholder="username">
+      <input type="submit" value="submit">
+    </form>
+
+    <script type="text/javascript">
+    const form = document.querySelector('.signup-form');
+    // const username = document.querySelector('#username');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      // console.log(username.value);
+      console.log(form.username.value);
+    });
+
+    // testing RegEx
+    const username = 'shaun';
+    const pattern = /[a-z]{6,}/;
+
+    // let result = pattern.test(username);  // it returns a boolean
+    // console.log(result);
+    //
+    // if(result){
+    //   console.log('regex test passed!');
+    // }
+    // else{
+    //   console.log('regex test failed!');
+    // }
+
+    let result = username.search(pattern);  // it will return the position of the first letter in the word
+    console.log(result);
+    </script>
+  </body>
+</html>
