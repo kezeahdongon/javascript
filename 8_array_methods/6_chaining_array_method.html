@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>CHAINING ARRAY METHOD</title>
+  </head>
+  <body>
+    <h1>Array methods</h1>
+
+    <script type="text/javascript">
+    // chaining array method
+    const products = [
+      {name: 'candy', price: 20},
+      {name: 'curls', price: 30},
+      {name: 'breads', price: 10},
+      {name: 'drinks', price: 50}
+    ];
+    // const filtered = products.filter(product => product.price > 20);
+    // const promos = filtered.map(product => {
+    //   return `the ${product.name} is ${product.price/2} pounds`;
+    // });
+    // console.log(promos);
+
+// other way
+    const promos = products
+    .filter(product => product.price > 20)
+    .map(product => `the ${product.name} is ${product.price/2} pounds`)
+    console.log(promos);
+    </script>
+  </body>
+</html>

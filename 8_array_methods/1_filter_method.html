@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>FILTER METHOD</title>
+  </head>
+  <body>
+    <h1>Array methods</h1>
+
+    <script type="text/javascript">
+    // filter method
+    const scores = [10, 30, 15, 25, 50, 40, 5];
+    const filteredScores = scores.filter((score) => {
+      return score > 20;
+    });
+    console.log(filteredScores);  // Array(4) [ 30, 25, 50, 40 ] (it filters out the scores which are 20 below)
+
+    const users = [
+      {name: 'reyco', premium: true},
+      {name: 'kezeah', premium: false},
+      {name: 'xreyc', premium: false},
+      {name: 'zeah', premium: true}
+    ];
+    const premiumUsers = users.filter(user => user.premium);
+    console.log(premiumUsers);
+
+    </script>
+  </body>
+</html>

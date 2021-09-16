@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>REDUCE METHOD</title>
+  </head>
+  <body>
+    <h1>Array methods</h1>
+
+    <script type="text/javascript">
+    // reduce method
+    // const scores = [10, 20, 60, 40, 70, 90, 30];
+    // const result = scores.reduce((acc, curr) => {
+    //   if(curr > 50){
+    //     acc++;
+    //   }
+    //   return acc;
+    // }, 0);
+    // console.log(result);
+
+    const scores = [
+      {player: 'reyco', score: 50},
+      {player: 'eyco', score: 30},
+      {player: 'rey', score: 70},
+      {player: 'xreyc', score: 60},
+      {player: 'reyco', score: 50},
+      {player: 'eyco', score: 30},
+      {player: 'rey', score: 70},
+      {player: 'xreyc', score: 60},
+      {player: 'reyco', score: 50},
+      {player: 'eyco', score: 30},
+      {player: 'rey', score: 70},
+      {player: 'xreyc', score: 60},
+      {player: 'reyco', score: 50},
+      {player: 'eyco', score: 30},
+      {player: 'rey', score: 70},
+      {player: 'xreyc', score: 60},
+      {player: 'reyco', score: 50},
+      {player: 'eyco', score: 30},
+      {player: 'rey', score: 70},
+      {player: 'xreyc', score: 60}
+    ];
+     const reycoTotal = scores.reduce((acc, curr) => {
+       if(curr.player === 'reyco'){
+         acc += curr.score;
+       }
+       return acc;
+     }, 0);
+     console.log(reycoTotal);
+    </script>
+  </body>
+</html>

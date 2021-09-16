@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>MAP METHOD</title>
+  </head>
+  <body>
+    <h1>Array methods</h1>
+
+    <script type="text/javascript">
+    // map method
+    const prices = [20, 10, 30, 25, 15, 80, 5];
+    const salePrices = prices.map(price => price / 2);
+    console.log(salePrices);  // Array(7) [ 10, 5, 15, 12.5, 7.5, 40, 2.5 ] (it will divide the prices into half)
+
+    const products = [
+      {name: 'candy', price: 20},
+      {name: 'curls', price: 30},
+      {name: 'breads', price: 10},
+      {name: 'drinks', price: 50}
+    ];
+    const saleProducts = products.map((product) => {
+      if(product.price > 30){
+        return {name: product.name, price: product.price/2}
+      }
+      else {
+        return product;
+      }
+    });
+    console.log(saleProducts);
+    /*
+    Array(4) [ {…}, {…}, {…}, {…} ]
+    0: Object { name: "candy", price: 20 }
+    1: Object { name: "curls", price: 30 }
+    2: Object { name: "breads", price: 10 }
+    3: Object { name: "drinks", price: 25 }
+    */
+
+    </script>
+  </body>
+</html>
