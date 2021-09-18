@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>DATES AND TIME IN JAVASCRIPT</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    // dates and times
+    const now = new Date();
+    console.log(now); // Date Fri Sep 17 2021 22:48:56 GMT+0800 (Philippine Standard Time) (it will return the current date and time)
+    console.log(typeof now);  // object (it will return the data type)
+
+    // year, month, day, time
+    console.log('getFullYear:', now.getFullYear()); // getFullYear: 2021 (it will return the current year)
+    console.log('getMonth:', now.getMonth()); // getMonth: 8 (return the current month (september))
+    console.log('getDate:', now.getDate()); // getDate: 17 (return the current date)
+    console.log('getDay:', now.getDay()); // getDay: 5 (it returns the current day of the week (friday))
+    console.log('getHours:', now.getHours()); // getHours: 22
+    console.log('getMinutes:', now.getMinutes()); // getMinutes: 59
+    console.log('getSeconds:', now.getSeconds()); // getSeconds: 39
+
+    // timestamps
+    console.log('timestamp:', now.getTime()); // timestamp: 1631890933656
+
+    // data strings
+    console.log(now.toDateString());  // Fri Sep 17 2021
+    console.log(now.toTimeString());  // 23:03:42 GMT+0800 (Philippine Standard Time)
+    console.log(now.toLocaleString());  // 17/09/2021, 11:03:42 pm
+    </script>
+  </body>
+</html>

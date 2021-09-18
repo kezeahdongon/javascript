@@ -1,0 +1,28 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+        <title>DATE-FNS LIBRARY</title>
+  </head>
+  <body>
+    <div class="clock">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+      const now = new Date();
+      // console.log(dateFns.isToday(now));  // true
+
+      // formatting options
+      console.log(dateFns.format(now, 'YYYY')); // 2021 (for the year)
+      console.log(dateFns.format(now, 'MMMM')); // September [4-M (for full month) 3-M (for abbrebiation of month)]
+      console.log(dateFns.format(now, 'dddd')); // Saturday (for getting the day)
+      console.log(dateFns.format(now, 'Do')); // 18th (it returns the date)
+      console.log(dateFns.format(now, 'dddd, MMMM Do, YYYY'));  // Saturday, September 18th, 2021
+
+      // comparing dates
+      const before = new Date('December 27 2020 02:02:00');
+      console.log(dateFns.distanceInWords(now, before));  // 9 months
+    </script>
+  </body>
+</html>

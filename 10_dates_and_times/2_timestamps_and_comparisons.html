@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>TIMESTAMPS AND COMPARISONS</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    // timestamps
+    const before = new Date('September 17 2021 23:10:05');
+    const now = new Date();
+    // console.log(now.getTime(), before); // 1631891260932, Date Fri Sep 17 2021 23:10:05 GMT+0800 (Philippine Standard Time)
+    // console.log(now.getTime(), before.getTime()); // 1631891490901 1631891405000
+
+    const diff = now.getTime() - before.getTime();
+    console.log(diff);  // 189677
+
+    const mins = Math.round(diff / 1000 / 60);
+    const hours = Math.round(mins / 60);
+    const days = Math.round(hours / 24);
+    console.log(mins, hours, days);  // 6 0 0
+    console.log(`the blod was written ${days} ago.`);
+
+    // converting timestamps into date objects
+    const timestamp = 348273467023;
+    console.log(new Date(timestamp)); // Date Wed Jan 14 1981 06:37:47 GMT+0800 (Philippine Standard Time)
+    </script>
+  </body>
+</html>
