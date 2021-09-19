@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>THE FETCH API</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      // fetch api
+      // fetch will only return "error" if there is error in network or cannot reach the server
+        /* fetch('todosi.json')
+          .then((response) => {
+            if(response.status == 404) {
+              throw("File not found")
+            } else {
+              console.log('resolved', response);
+            }
+
+          })
+          .catch((err) => {
+            console.log('rejected', err.status);
+          });
+        */
+
+      fetch('todos/luigi.json').then(response => {
+        console.log('resolved', response);
+        return response.json();
+      })
+        .then(data => {
+          console.log(data);  // Array(3) [ {…}, {…}, {…} ] (it will return the data)
+        })
+        .catch(err => {
+            console.log('rejected', err);
+      })
+
+    </script>
+  </body>
+</html>
