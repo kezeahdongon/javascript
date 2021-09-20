@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>THROWING AND CATCHING ERRORS</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      // async and await
+
+      const getTodos = async () => {
+        const response = await fetch('todos/luigi.json');
+
+        if(response.status !== 200){
+          throw new Error('cannot fetch the data');
+        }
+        const data = await response.json();
+
+        return data;
+      };
+
+      getTodos()
+      .then(data => console.log('resolved:', data))
+      .catch(err => console.log('rejected:', err.message));
+    </script>
+  </body>
+</html>
