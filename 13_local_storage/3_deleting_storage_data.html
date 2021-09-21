@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>DELETING STORAGE DATA</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+    <script type="text/javascript">
+      // store data in local storage
+      localStorage.setItem('name', 'mario');  // localStorage.setItem('key name', 'value of the key');
+      localStorage.setItem('age', 50);
+
+      // get data from local storage
+      let name = localStorage.getItem('name');
+      let age = localStorage.getItem('age');
+
+      console.log(name, age);
+
+      // deleting data from local storage
+      localStorage.removeItem('name');
+      localStorage.clear(); // to remove all stored in the local storage
+
+      name = localStorage.getItem('name');
+      age = localStorage.getItem('age');
+
+      console.log(name, age);  // null null
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>STORING AND GETTING DATA</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+    <script type="text/javascript">
+      // store data in local storage
+      localStorage.setItem('name', 'mario');  // localStorage.setItem('key name', 'value of the key');
+      localStorage.setItem('age', 50);
+
+      // get data from local storage
+      let name = localStorage.getItem('name');
+      let age = localStorage.getItem('age');
+      console.log(name, age); // mario 50
+
+      // updating data
+      localStorage.setItem('name', 'reyco');  // it overrides the value of the name because the key 'name' already exist
+      localStorage.age = '40';  // other way of overriding the value in local storage
+
+      name = localStorage.getItem('name');
+      age = localStorage.getItem('age');
+      console.log(name, age); // reyco 40
+ 
+    </script>
+  </body>
+</html>
