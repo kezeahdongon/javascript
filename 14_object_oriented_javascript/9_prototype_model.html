@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+
+    </style>
+      <title>PROTOTYPE MODEL</title>
+  </head>
+  <body>
+    <h1>Object Oriented javaScript</h1>
+    <h5>Prototypes</h5>
+    <p>- every object in javaScript has a prototype.</p>
+    <p>- Prototypes contain all the methods for that object type.</p>
+    <script type="text/javascript">
+    // constructor functions
+
+    function User(username, email){
+      this.username = username;
+      this.email = email;
+    }
+
+    User.prototype.login = function(){
+      console.log(`${this.username} has logged in`);
+      return this;
+    };
+
+    User.prototype.logout = function(){
+      console.log(`${this.username} has logged out`);
+      return this;
+    };
+
+      const userOne = new User('reyco', 'reycoseguma@yahoo.com');
+      const userTwo = new User('kezeah', 'kezeahdongon@yahoo.com');
+
+      console.log(userOne, userTwo);
+      userOne.login().logout();
+
+    </script>
+  </body>
+</html>

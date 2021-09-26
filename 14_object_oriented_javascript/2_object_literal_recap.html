@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+
+    </style>
+    <title>OBJECT LITERAL RECAP</title>
+  </head>
+  <body>
+    <h1>Object Oriented javaScript</h1>
+
+    <script type="text/javascript">
+      const userOne = {
+        username: 'reyco',
+        email: 'reyco@meandyou.ph',
+        login(){
+          console.log('the user logged in');
+        },
+        logout(){
+          console.log('the user logged out');
+        }
+      };
+
+      console.log(userOne.username, userOne.email); // reyco reyco@meandyou.ph
+      userOne.login();  // the user logged in
+
+      const userTwo = {
+        username: 'kezeah',
+        email: 'kezeah@meandyou.ph',
+        login(){
+          console.log('the user logged in');
+        },
+        logout(){
+          console.log('the user logged out');
+        }
+      };
+
+      console.log(userTwo.username, userTwo.email); // kezeah kezeah@meandyou.ph
+      userTwo.login();  // the user logged in
+    </script>
+  </body>
+</html>

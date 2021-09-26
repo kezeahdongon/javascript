@@ -6,8 +6,20 @@
   </head>
   <body>
     <h1>Local Storage</h1>
-    <script type="text/javascript">l
-      
+    <script type="text/javascript">
+      // stringifying data (The JSON.stringify() method converts a JavaScript object or value to a JSON ... it's responsible to define what data will be serialized)
+      const todos = [
+        {text: 'play mariokart', author: 'shaun'},
+        {text: 'buy some milk', author: 'mario'},
+        {text: 'buy some bread', author: 'luigi'}
+      ];
+
+      // console.log(JSON.stringify(todos));
+
+      localStorage.setItem('todos', JSON.stringify(todos));
+
+      const stored = localStorage.getItem('todos');
+      console.log(JSON.parse(stored));
     </script>
   </body>
 </html>
