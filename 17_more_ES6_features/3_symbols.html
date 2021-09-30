@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SYMBOLS</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      const symbolOne = Symbol('a generic name');
+      const symbolTwo = Symbol('a generic name');
+
+      console.log(symbolOne, symbolTwo, typeof symbolOne);
+      console.log(symbolOne === symbolTwo); // false
+      // symbols are all unique
+
+      const legend = {};
+
+      legend.age = 24;
+      legend['shirt'] = 'white';
+      console.log(legend);  // Object { age: 24, shirt: "white" }
+    </script>
+  </body>
+</html>

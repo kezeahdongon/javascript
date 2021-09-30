@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SETS</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      // sets
+      const namesArray = ['reyco', 'kezeah', 'reyke', 'reyco'];
+      console.log(namesArray);
+
+      const namesSet = new Set(['reyco', 'kezeah', 'reyke', 'reyco']); // it does not allow duplicate array
+      console.log(namesSet);
+
+      // const uniqueNames = [...namesSet];
+      const uniqueNames = [...new Set(namesArray)];
+      console.log(uniqueNames);
+
+      const ages = new Set();
+      ages.add(20);
+      ages.add(40);
+      ages.add(67);
+      ages.add(20); // still doest not allow duplicated multiple values
+      ages.delete(67); // it deletes value from the array
+      console.log(ages, ages.size); // use ages.size to know the size of the array
+      console.log(ages.has(40)); // it return boolena value. and since ages has the value of 40 then it is true
+
+      ages.clear();
+      console.log(ages); // it clears the array
+
+      const legends = new Set([
+        {name: 'reyco', age: 24},
+        {name: 'kezeah', age: 23},
+        {name: 'reyco', age: 23}
+      ]); // only prevents object to be duplicates if they are totally the same
+
+      legends.forEach(legend => {
+        console.log(legend.name, legend.age);
+      });
+    </script>
+  </body>
+</html>
